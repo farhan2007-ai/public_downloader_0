@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fitgirl_repacks/Page</title>
+</head>
+<body>
+    /
+    <style>
+        html{
+            background-image: url(gta_v-repacks.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(255, 0, 0);
+            position: absolute;
+            left: 5cm;
+            top: 8cm;
+        }
+        p{
+            color: rgb(255, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 6cm;
+            top: 10cm;
+        }
+        a{
+            position: absolute;
+            left: 6cm;
+            top: 14cm;
+        }
+    </style>
+
+
+    <h2>Download GTA 5 by fitgirl repacks !</h2>
+    <p>Click the link below to download your file:</p>
+    <a id="downloadLink" href="#" target="_blank">Download Here</a>
+
+    <script>
+        // Get the zip file name from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const zipFileName = urlParams.get('zipfile');
+        
+        if (zipFileName) {
+            const fileURL = "https://github.com/farhan2007-ai/public_downloader/raw/main/" + zipFileName;
+            document.getElementById("downloadLink").href = fileURL;
+            document.getElementById("downloadLink").textContent = "Download " + zipFileName;
+        }
+    </script>
+</body>
+</html>
+
